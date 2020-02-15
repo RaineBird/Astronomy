@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Constellations</title>
+	<meta charset="UTF-8" />
+    <meta name="auteur" content="Meftah Manel">
+    <meta name="keywords" content="Astronomie, galaxie, étoiles, éspace, système solaire, NASA, SpaceX, constellations, planètes, satellites ">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/animation.css">
+</head>
+
+<body id="Constellations" onload="date();">
+
+	<nav class="topNav">
+		<button onclick="afficherMenu();" class="openMenu"><span>Menu</span></button>
+	</nav>
+
+		<aside>
+			<div class="menuNav" id="menu">
+                <span class="fermer" onclick="fermerMenu();">&times;</span>
+
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="#presentation">Présentation</a></li>
+					<li><a href="#rep" >Repérage des Constellations</a></li>
+					<li>
+						<a href="#ch">Ciel d'Hiver</a>
+						<ul class="innerNav">
+							<li><a href="#constH">Les constellations du ciel d'Hiver</a></li>
+							<li><a href="#pleiades">Les Pléiades</a></li>
+							<li><a href="#triangleH">Triangle d'Hiver</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#ce">Ciel d'Ete</a>
+						<ul class="innerNav">
+							<li><a href="#constE">Les constellations du ciel d'Été</a></li>
+							<li><a href="#nebuleuses">Les Nébuleurse M8 et M20</a></li>
+							<li><a href="#triangleE">Triangle d'Été</a></li>
+						</ul>
+					</li>
+					<li><a href="#proposerArticle" onclick="afficher(0);">Proposer un article</a></li>
+					<li><a href="#contact" onclick="afficher(1);">Contact</a></li>	
+				</ul>	
+			</div>
+		</aside>
+    
+        <div id="forms">
+            <div id="proposerArticle">
+                <div class="bloc-formulaire">
+                    <span class="fermer" onclick="fermer(0);">&times;</span>
+                    <form id="form_propArticle" onsubmit="return validP();" >
+                        <fieldset>
+                            <legend class="titre">Proposer un article</legend>
+                            <table>
+                            <tr>
+                                <td>Nom</td>
+                                <td>Prenom</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="Nom"></td>
+                                <td><input type="text" id="Prenom"></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>Telephone</td>
+                            </tr>
+                            <tr>
+                                <td><input type="email" id="Email"></td>
+                                <td><input type="tel" id="Tel"></td>
+                            </tr>
+                            <tr>
+                                <td>Votre réseau social</td>
+                                <td>Selectionnez votre article</td>
+
+                            </tr>
+                            <tr>
+                                <td><input type="url" id="Lien"></td>
+                                <td>
+                                    <label class="fichierLabel">
+                                    Importer
+                                        <input type="file" class="fichierInput" required="required" >
+                                    </label>
+                                </td>
+                    
+                            </tr>
+                            <tr>
+                                <td>Couleur de fond de votre article</td> 
+                                <td></td>
+                            </tr>         
+                            <tr>
+                                <td><input type="color" id="couleur" class="colorInput"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="Soumettre l'article" class="valid">
+                                    <input type="reset" value="Effacer" class="effacer">
+                                </td>
+                                <td></td>
+
+                        </table>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <div id="contact">
+                <div class="bloc-formulaire">
+                <span class="fermer" onclick="fermer(1);">&times;</span>
+                <form id="form_contact" onsubmit="return validC()">
+                    <fieldset>
+                        <legend class="titre">Contact</legend>
+                        <table>
+                            <tr>
+                                <td>Nom</td>
+                                <td>Email</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="nom"></td>
+                                <td><input type="email" id="email"></td>
+                            </tr>
+                        </table>
+                        <div>
+                            <textarea placeholder="Saisir votre message ici..." required="required"></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" value="Envoyer" class="valid">
+                            <input type="reset" value="Effacer" class="effacer">
+                        </div> 
+                    </fieldset>
+                </form>
+                </div>
+            </div>
+        </div>
+    
+	<div id="bloc_page">
+		<section id="article">
+			<h1 id="presentation" class="anchor">Présentation</h1>
+			<p>
+			Les constellations sont des étoiles proches qui forment une figure quand on les relie entre elles. Chaque civilisation a défini ses propres constellations (Égyptiens, Chinois, Grecs, Romains, etc.).
+			Actuellement, l’Union astronomique internationale divise le ciel en 88 constellations officielles, dont près de la moitié proviennent des astronomes grecs. La plus ancienne liste occidentale de constellations a été faite par l’astronome grec Ptolémée au 2e siècle après Jésus-Christ.	
+			</p>
+			<h1 id="rep" class="anchor">Repérage des Constellations</h1>
+			<p>
+			Essayez de repérer les constellations ci-dessous !
+			</p>
+            
+            
+            
+            <div class="diaporama">
+            
+                <div class="diapo fade">
+                    <div class="numImage">1/5</div>
+                    <img src="../media/constellations/Grande_ourse.jpg" class="cropSec" alt="Grande Ourse">
+                    <div class="caption">Grande Ourse</div>
+                </div>
+                
+                <div class="diapo fade">
+                    <div class="numImage">2/5</div>
+                    <img src="../media/constellations/Petite_ourse.jpg" class="cropSec" alt="Petite Ourse">
+                    <div class="caption">Petite Ourse</div>
+                </div>
+                
+                <div class="diapo fade">
+                    <div class="numImage">3/5</div>
+                    <img src="../media/constellations/Cassiopee.jpg" class="cropSec" alt="Cassiopée">
+                    <div class="caption">Cassiopée</div>
+                </div>
+                
+                <div class="diapo fade">
+                    <div class="numImage">4/5</div>
+                    <img src="../media/constellations/Croix_du_Sud.jpg" class="cropSec" alt="Croix du Sud">
+                    <div class="caption">Croix du Sud</div>
+                </div>
+                
+                <div class="diapo fade">
+                    <div class="numImage">5/5</div>
+                    <img src="../media/constellations/Orion.jpg" class="cropSec" alt="Orion">
+                    <div class="caption">Orion</div>
+                </div>
+                
+                <a class="prec" onclick="imgSuivante(-1);">&#10094;</a>
+                <a class="suiv" onclick="imgSuivante(1);">&#10095;</a>
+                
+            </div>
+            <br>		
+			
+  			<p>Pas facile, n'est-ce pas ?
+			</p>
+
+			<h1 id="ch" class="anchor">Ciel d'Hiver</h1>
+			<p>Voici une liste de ce que vous pourrez peut être repérer en hiver :</p>
+
+                <h2 id="constH">Les constellations du ciel d'Hiver :</h2>
+                    <table class="tableConst">
+                    	<thead>
+                    		<tr>
+                    			<th>Nom de la Constellation</th>
+                    			<th>Étoile(s) Importante(s)</th>
+                    			<th>Autres Objets Célestes </th>
+                    		</tr>
+                    	</thead>
+                    	<tbody>
+                    		<tr>
+                    			<td>Orion</td>
+                    			<td>Bétélgeuse, Béllatrix, Rigel et Saiph</td>
+                    			<td>Grande Nébuleuse d'Orion (Messier 42)</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Le Taureau</td>
+                    			<td>Aldébaran</td>
+                    			<td>L'amas des Hyades, les Plaiades (Messier 45)</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Les Gémeaux</td>
+                    			<td>Castor et Pollux</td>
+                    			<td>Messier 35</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Le Cocher</td>
+                    			<td>Capella, appelée aussi la Chèvre</td>
+                    			<td>Messier 36, 37 et 38</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Le Grand Chien</td>
+                    			<td>Sirius</td>
+                    			<td>Messier 41</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Le Cancer</td>
+                    			<td>β Cancri, ou Al Tarf</td>
+                    			<td>L'amas de Praesepe (Messier 44)</td>
+                    		</tr>
+                    		<tr>
+                    			<td>La Grande Ourse</td>
+                    			<td>Alkaid, Dubhe et Merak</td>
+                    			<td>Messier 51, 101, 106, 108 et 109</td>
+                    		</tr>
+                    		<tr>
+                    			<td>La Petite Ourse</td>
+                    			<td>Polaris ou l'Étoile Polaire</td>
+                    			<td>Les Ursides</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Cassipée</td>
+                    			<td>Lota, Caph et Navi</td>
+                    			<td>L'amas E.T. (NGC457)</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Persée</td>
+                    			<td>Algol et Mirfak</td>
+                    			<td>Le double amas de Persée</td>
+                    		</tr>
+                        </tbody>
+
+                    		<tfoot>
+                                <tr>
+                                    <th>Nom de la Constellation</th>
+                                    <th>Étoile(s) Importante(s)</th>
+                                    <th>Autres Objets Célestes </th>
+                                </tr>
+                    			
+                    		</tfoot>
+
+                    </table>  
+                <h2 id="pleiades">Les Pléiades:</h2>
+                <div class="centerMedia">
+                	<img src="../media/m45.jpg" class="cropMoy" alt="m45">
+                </div>
+				<p>
+                        M45, l’amas des Pléiades, est un groupe d’étoiles encore « jeunes », nées dans un même nuage de gaz il y a une centaine de millions d’années. Ce groupe est situé à environ 440 années-lumière de la Terre et s’étend sur 14 années-lumière. 
+ 					    Cet amas très célèbre peut être admiré même en pleine ville dans un ciel pollué par les lumières artificielles. 
+                </p>
+                <h2 id="triangleH">Triangle d'Hiver :</h2>
+                <div class="centerMedia">
+					<img src="../media/Triangle_hiver.jpg" class="cropMoy" alt="Triangle d'Hiver">
+					<div class="figcaption">Procyon à gauche, Bételgeuse à droite, Sirius en bas.</div>
+                </div>
+				<p>
+                    Les soirées du mois de février sont l’occasion de découvrir le Triangle d’hiver et ses trois étoiles : Procyon, Bételgeuse et Sirius. 
+ 				   Procyon (Alpha Canis Minoris) est l’étoile la plus brillante de la constellation du Petit Chien et la septième plus brillante du ciel nocturne.  
+ 				   Bételgeuse (Alpha Orionis) est la neuvième plus brillante étoile du ciel. Elle marque la position de l’épaule gauche du chasseur Orion.  
+ 				   Sirius (Alpha Canis Majoris) est la plus brillante étoile du ciel après le Soleil. 
+                </p>
+				
+			<h1 id="ce" class="anchor">Ciel d'été</h1>
+				<h2 id="constE">Les Constellations du ciel d'Été</h2>
+						<table class="tableConst">
+                    	<thead>
+                    		<tr>
+                    			<th>Nom de la Constellation</th>
+                    			<th>Étoile(s) Importante(s)</th>
+                    			<th>Autres Objets Célestes </th>
+                    		</tr>
+                    	</thead>
+                    	<tbody>
+                    		<tr>
+                    			<td>La Lyre</td>
+                    			<td>Vega, Épsilon, Gamma et Béta</td>
+                    			<td>La Nébuleuse annulaire de la Lyre</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Le Bouvier</td>
+                    			<td>Arcturus</td>
+                    			<td>L'amas globulaire NGC 5466 </td>
+                    		</tr>
+                    		<tr>
+                    			<td>La Couronne Boréale</td>
+                    			<td>Alphecca</td>
+                    			<td>Aucun</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Le Cygne</td>
+                    			<td>Deneb, Albireo et Sadr</td>
+                    			<td>Messier 29 et 39</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Le Lézard</td>
+                    			<td>α Lacertae</td>
+                    			<td>L'amas ouvert NGC 7243</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Le Petit Renard</td>
+                    			<td>Anser</td>
+                    			<td>la nébuleuse de l'Haltère M27 et l'exoplanèteHD 189733 b</td>
+                    		</tr>
+                    		<tr>
+                    			<td>L'Aigle</td>
+                    			<td>Altair </td>
+                    			<td>La Nébuleuse B142</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Le Sagittaire</td>
+                    			<td>Kaus Australis</td>
+                    			<td>Messier 8, 20 et 50</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Le Scorpion</td>
+                    			<td>Antarès</td>
+                    			<td>Messier 6 et 7</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Le Serpent</td>
+                    			<td>Unukalhai</td>
+                    			<td>Messier 5</td>
+                    		</tr>
+                        </tbody>
+
+                    		<tfoot>
+                                <tr>
+                                    <th>Nom de la Constellation</th>
+                                    <th>Étoile(s) Importante(s)</th>
+                                    <th>Autres Objets Célestes </th>
+                                </tr>
+                    			
+                    		</tfoot>
+                    </table>  
+				
+                <h2 id="nebuleuses">Les nébuleuses Messier 20 et Messier 8, dans le Sagittaire</h2>
+                <div class="centerMedia">
+				    <img src="../media/M8_and_M20.jpg" class="cropMoy" alt="M8 et M20">
+				    <div class="figcaption">M8, la grande nébuleuse en haut et M20 tout en bas</div>
+                </div>
+				<p>
+                    C'est principalement le long de la Voie lactée que l'on peut observer avec un instrument de petites et délicates taches laiteuses appelées « nébuleuses ». Ces nuages sont des forges d'étoiles.
+				    Celles que l'on peut distinguer sont les plus actives, telle Messier 20 (M 20 ou NGC 6514), surnommée Trifide, et Messier 8 (M 8 ou NGC 6523) également désignée nébuleuse de la Lagune (accompagnée d'un amas ouvert), toutes les deux sont dans le Sagittaire, en direction du centre de notre galaxie.
+                </p>
+                <h2 id="triangleE">Triangle d'été</h2>
+                <div class="centerMedia">
+                	<img src="../media/triangle_ete.jpg" class="cropMoy" alt="Triangle d'été">
+				</div>
+				<p> 
+                    Appelées aussi les « Trois Belles d'été » : Véga (la Lyre), Deneb (le Cygne) et Altaïr (l'Aigle). Au-dessus de l'ouest, Arcturus (le Bouvier). Et vers le sud : la rouge Antarès (Scorpion).
+                    La plus lumineuse des 3 étoiles du triangle de l'été, Véga, est une étoile bleue située à 25 années-lumière de la Terre. Altaïr est à peu près située à la même distance, environ 17 années-lumière. Quant à Deneb, son éclat pourrait laisser croire qu'elle se situe, à peu de choses près, également à la même distance. Il n'en est rien : Deneb se balade, elle, à 3 000 années-lumière de nous.
+                    La surface du triangle recouvre les constellations de la Flèche et du Petit Renard ainsi que l'astérisme de la Croix du Nord.
+					Ayant pour fond la Voie lactée, ce triangle est très facilement identifiable et sert souvent de point de départ pour retrouver d'autres constellations (comme le Petit Renard en son centre) ou repérer quelques objets du ciel profond, comme M27 ou M57. 
+                </p>
+
+			<div class="center">
+                <div class="inner"><a href="systemeSolaire.html" class="navBtn"> &lt;&lt; </a></div>
+                <div class="inner"><a href="NASA.html" class="navBtn"> &gt;&gt; </a></div>
+            </div>
+
+		</section>
+        <footer>
+            <div id="date"></div>
+
+            <hr class="pointilles">
+            <div>
+                    
+                <table class="center newsletter">
+                    <tr>
+                        <td class="sideTitle">Newsletter</td>
+                        <td class="whiteBox"><input type="email"></td></tr>
+                    <tr>
+                        <td></td>
+                        <td class="whiteBox"><input type="submit" value="souscrire à la newsletter" class="valid" onclick="valid();"></td></tr>
+                </table>
+            </div>
+                 
+        </footer>
+
+    </div>
+    
+
+<script src="../js/main.js"></script>
+<script src="../js/diapo.js"></script>
+
+</body>
+</html>

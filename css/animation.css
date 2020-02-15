@@ -1,0 +1,142 @@
+hr {
+    animation-name: chargement;
+    animation-duration: 3s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes chargement {
+    0%{width: 0px;}
+    100%{width: 800px;visibility:visible;}
+}
+
+
+h1.animated {
+    opacity: 0;
+  	animation-name: fadeInTop;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+@keyframes fadeInTop {
+    0%{opacity: 0;transform:translateY(-1000px);}
+    100%{opacity: 1;transform:translateY(0px);}
+}
+
+fieldset table input, form div textarea {
+  animation-name: fadeColor;
+  transition-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.effacer, .valid, .fichierLabel, table.newsletter input[type="email"]:hover {
+    transition: 0.2s;
+}
+
+@keyframes fadeColor {
+  0% {background-color: rgba(27, 31, 34, 0.6);}
+  100%{background-color: rgb(55, 59, 62);}
+}
+
+
+#definition {
+     animation-name: fadeInBottom;
+     animation-duration: 2s;
+     animation-delay: 2s;
+     animation-fill-mode: forwards;
+}
+
+@keyframes fadeInBottom {
+    0%{opacity: 0;transform:translateY(1000px);}
+    100%{opacity: 1;transform:translateY(0px);}
+}
+
+
+.b1, .b2, .b3, .b4 {
+	animation-name: fadeIn;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+.b1 {
+	animation-delay: 4s;
+}
+
+.b2 {
+
+	animation-delay: 5s;
+}
+
+.b3 {
+
+	animation-delay: 6s;
+
+}
+
+.b4 {
+	animation-delay: 7s;
+}
+
+@keyframes fadeIn {
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+
+
+button.openMenu {
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+button.openMenu span {
+	cursor: pointer;
+	transition: 0.5s;	
+}
+
+button.openMenu span:after {
+	content: ':';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: all 0.5s;
+}
+
+button.openMenu:hover span{
+	padding-right: 25px;
+}
+
+button.openMenu:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.menuNav {
+    transition:0.5s;
+}
+
+a, #sommaire p {
+  transition: 0.3s;
+}
+
+.fermer {
+  transition: 0.5s;
+}
+
+.prec, .suiv {
+    transition: 0.3s;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+    0%{opacity: 0.4}
+    100%{opacity: 1}
+}

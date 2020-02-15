@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Système Solaire</title>
+    <meta charset="UTF-8" />
+    <meta name="auteur" content="Meftah Manel">
+    <meta name="keywords" content="Astronomie, galaxie, étoiles, éspace, système solaire, NASA, SpaceX, constellations, planètes, satellites ">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/animation.css">
+</head>
+
+<body id="Sysolaire" onload="date();">
+
+	<nav class="topNav">
+		<button onclick="afficherMenu();" class="openMenu"><span>Menu</span></button>
+        <audio controls>
+            <source src="../media/Sonification_of_a_Hubble_Deep_Space_Image.mp3" type="audio/mpeg">
+        </audio>
+        <span id="audioCaption"><a href="https://www.space.com/galaxy-cluster-recordings-eerie-sounds-hubble.html">Le Son Des Étoiles</a></span>
+	</nav>
+
+		<aside>
+			<div class="menuNav" id="menu">
+                <span class="fermer" onclick="fermerMenu();">&times;</span>
+				<a href="index.html">Accueil</a>
+				<a href="#sys">Système Solaire</a>
+				<a href="#articlesD">Articles Divers</a>
+				<a href="#galaxies">Galaxies</a>
+				<a href="#nebuleuses">Les Nébuleuses</a>
+                <a href="#proposerArticle" onclick="afficher(0);">Proposer un article</a>
+				<a href="#contact" onclick="afficher(1);">Contact</a>	
+			</div>
+		</aside>
+        <div id="forms">
+            <div id="proposerArticle">
+                <div class="bloc-formulaire">
+                    <span class="fermer" onclick="fermer(0);">&times;</span>
+                    <form id="form_propArticle" onsubmit="return validP();" >
+                        <fieldset>
+                            <legend class="titre">Proposer un article</legend>
+                            <table>
+                            <tr>
+                                <td>Nom</td>
+                                <td>Prenom</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="Nom"></td>
+                                <td><input type="text" id="Prenom"></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>Telephone</td>
+                            </tr>
+                            <tr>
+                                <td><input type="email" id="Email"></td>
+                                <td><input type="tel" id="Tel"></td>
+                            </tr>
+                            <tr>
+                                <td>Votre réseau social</td>
+                                <td>Selectionnez votre article</td>
+
+                            </tr>
+                            <tr>
+                                <td><input type="url" id="Lien"></td>
+                                <td>
+                                    <label class="fichierLabel">
+                                    Importer
+                                        <input type="file" class="fichierInput" required="required" >
+                                    </label>
+                                </td>
+                    
+                            </tr>
+                            <tr>
+                                <td>Couleur de fond de votre article</td> 
+                                <td></td>
+                            </tr>         
+                            <tr>
+                                <td><input type="color" id="couleur" class="colorInput"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="Soumettre l'article" class="valid">
+                                    <input type="reset" value="Effacer" class="effacer">
+                                </td>
+                                <td></td>
+
+                        </table>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <div id="contact">
+                <div class="bloc-formulaire">
+                <span class="fermer" onclick="fermer(1);">&times;</span>
+                <form id="form_contact" onsubmit="return validC()">
+                    <fieldset>
+                        <legend class="titre">Contact</legend>
+                        <table>
+                            <tr>
+                                <td>Nom</td>
+                                <td>Email</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="nom"></td>
+                                <td><input type="email" id="email"></td>
+                            </tr>
+                        </table>
+                        <div>
+                            <textarea placeholder="Saisir votre message ici..." required="required"></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" value="Envoyer" class="valid">
+                            <input type="reset" value="Effacer" class="effacer">
+                        </div> 
+                    </fieldset>
+                </form>
+                </div>
+            </div>
+        </div>
+    
+	<div id="bloc_page">
+		<section id="article">
+            <h1 id="sys" class="anchor">Système Solaire</h1>
+
+            <div class="centerMedia">
+                <img src="../media/comparaison_systeme_solaire.jpg" class="cropMoy" alt="Système Solaire">
+                <div class="figcaption">Le système solaire, zoomer pour plus de details !</div>
+            </div>
+
+            <p>
+                On appelle Système solaire, l'ensemble des astres soumis au champ de gravitation du <a href="https://fr.wikipedia.org/wiki/Soleil">Soleil</a>(notre étoile à elle seule représente 99,8 % de la masse totale du Système solaire !). Le Système solaire évolue dans l'un des bras de notre galaxie spirale, la <a href="https://fr.wikipedia.org/wiki/Voie_lact%C3%A9e">Voie lactée</a>, à quelque 26.000 années-lumière de son centre. Selon les définitions établies par l'Union astronomique internationale, notre Système solaire comprend notamment :
+                Huit planètes -- et leurs satellites naturels ; il y en a plus de 175 connus -- que sont Mercure, Vénus, la Terre, Mars, Jupiter, Saturne, Uranus et Neptune, par ordre d'éloignement au Soleil. Les quatre premières sont qualifiées de planètes telluriques, les quatre dernières, de planètes gazeuses.Des planètes naines comme Pluton ou Cérès.Plusieurs centaines de milliers d'astéroïdes composés de roches et de minéraux métalliques essentiellement. Leur taille est extrêmement variable, de plusieurs centaines de kilomètres aux grains de poussière. Ils sont regroupés majoritairement dans la Ceinture d'astéroïdes principale, située entre Mars et Jupiter.Des milliers de comètes composées de poussières et de glaces volatiles.D'innombrables petits corps glacés comme les Centaures -- qui orbitent entre Jupiter et Neptune -- ou encore les objets transneptuniens dans la lointaine Ceinture de Kuiper. 
+            </p>
+            <div class="centerMedia">
+                <img src="../media/kuiperBeltChart.png" class="cropMoy" alt="Ceinture de Kuiper">
+            </div>
+            <p>
+                Au-delà de la Ceinture de Kuiper se trouverait un gigantesque ensemble de corps glacés baptisé nuage d'Oort. Sa limite externe marquerait la limite de l’influence gravitationnelle du Soleil. Les astronomes estiment qu'elle se situe quelque part entre 1,6 et 2 années-lumière -- soit entre 101.186 et 126.482 unités astronomiques -- de notre étoile ! Mais l'héliosphère -- cette bulle créée par les vents solaires -- ne s'étend pas aussi loin. Le milieu interstellaire l'interrompt dans une direction à une centaine d'unités astronomiques, soit seulement quelque 0,002 année-lumière.
+                Notez que le Système solaire réserve sans doute encore des surprises aux astronomes. Certaines régions comme la zone située entre le Soleil et Mercure sont encore mal connues. Les orbites de plusieurs objets transneptuniens suggèrent qu'une neuvième planète, peut-être 4 fois plus grande que la Terre et 10 fois plus massive, pourrait se cacher aux confins de notre Système solaire, entre 500 et 1.200 unités astronomiques du Soleil.
+            </p>
+            <h1 id="articlesD" class="anchor">Articles Divers</h1>
+            <p>Appuyez sur les images pour plus d'informations sur chaque planète</p>
+            
+            <table id="planetes">
+                <tr>
+                    <td><a href="https://blogs.futura-sciences.com/feldmann/2019/11/12/en-video-sdo-filme-le-transit-de-mercure-depuis-lespace/"><img class="crop" src="../media/planetes/nasamercury.jpg"  alt="Mercure"></a></td>
+                    
+                    <td><a href="https://www.futura-sciences.com/sciences/actualites/venus-inde-veut-aller-explorer-venus-2023-78323/"><img class="crop" src="../media/planetes/Venus.jpg" alt="Venus"></a></td>
+        
+                    <td><a href="https://guidetoiceland.is/fr/les-aurores-boreales/definition-aurores-boreales"><img class="crop" src="../media/planetes/Aurora.jpg" alt="Aurores Boréales"></a></td>
+                                        
+                </tr>
+                <tr>
+                    <td class="center">Mercure</td>
+                    <td class="center">Venus
+                    <td class="center">Aurores Boréales</td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.numerama.com/sciences/579028-la-planete-mars-en-2019-tout-ce-que-lexploration-martienne-nous-a-appris-cette-annee-chronologie.html"><img class="crop" src="../media/planetes/Mars.jpg" alt="Mars"></a></td>
+                    
+                    <td><a href="https://www.nasa.gov/feature/goddard/2016/hubble-captures-vivid-auroras-in-jupiter-s-atmosphere/"><img class="crop" src="../media/planetes/Jupiter.jpg" alt="Aurores de Jupiter"></a></td>
+                    
+                    <td><a href="https://carnegiescience.edu/news/saturn-surpasses-jupiter-after-discovery-20-new-moons-and-you-can-help-name-them"><img class="crop" src="../media/planetes/Saturn.jpg" alt="Saturn"></a></td>
+                                        
+                </tr>
+                <tr>
+                    <td class="center">Mars
+                        <td class="center">Aurores de Jupiter</td>
+                        <td class="center">Saturne</td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.futura-sciences.com/sciences/actualites/astronomie-images-anneaux-uranus-vus-tranche-comme-jamais-12720/"><img class="crop" src="../media/planetes/Uranus.jpg" alt="Anneaux d'Uranus"></a></td>
+                    
+                    <td><a href="http://www.astronomy.com/news/2019/11/a-weird-orbital-dance-keeps-these-moons-of-neptune-from-hitting-each-other"><img class="crop" src="../media/planetes/Neptune.jpg" alt="Neptune"></a></td>
+                    
+                    <td><a href="https://gizmodo.com/fresh-look-at-new-horizons-data-shows-pluto-s-far-side-1839303714"><img class="crop" src="../media/planetes/Pluto.jpg" alt="Pluto"></a></td>
+                                        
+                </tr>
+                <tr>
+                    <td class="center">Anneaux d'Uranus</td>
+                    <td class="center">Neptune</td>
+                    <td class="center">Pluton</td>
+                </tr>
+            </table>
+
+            <h2>Rotation relative des Planètes</h2>
+            <div class="centerMedia">
+                <video controls class="cropMoy">
+                    <source src="../media/rotation_relative_des_planetes.mp4">
+                </video>
+            </div>
+
+            <h2>Transit de Mercure</h2>
+            <div class="centerMedia">
+                <video controls>
+                <source src="../media/planetes/Mercury_transiting_the_sun_5.5h.mp4">
+                </video>
+            
+                <img src="../media/planetes/Mercury.jpg" alt="Transit de Mercure" class="cropMoy">
+                <div class="figcaption">Passage de Mercure à travers le solei, ainsi qu'un autre type de transit !</div>
+            </div>
+            <h1 id="galaxies" class="anchor">Galaxies</h1>
+            <div class="centerMedia">
+                <img src="../media/NZ-Galactic_Core.jpg" alt="Centre Galactique">
+                <div class="figcaption">Photo prise en Nouvelle Zélande du Centre Galactique, visible seulement quelques minutes après le coucher du soleil à cette période de l'année</div>
+            </div>
+            <p>
+                Une galaxie est un ensemble d'étoiles, de poussières et de gaz interstellaires dont la cohésion est assurée par la gravitation. Les galaxies présentent une grande diversité de taille (entre 2.000 et 500.000 années-lumière de diamètre) et de forme. Le rayonnement provenant des galaxies permet de répartir ces dernières en galaxies normales et galaxies actives, parmi lesquelles se trouvent les quasars. Les regroupements de galaxies que l'on observe dans l'univers sont appelés amas et superamas.
+                La galaxie à laquelle appartient le système solaire est la Voie lactée. La grande galaxie la plus proche de la Voie lactée, Andromède, est située à 2,3 millions d'années-lumière. Notre galaxie possède toutefois deux petites galaxies satellites (le grand et le petit Nuages de Magellan) situées respectivement à environ 150.000 et 200.000 années-lumière.
+                Voilà moins d'un siècle que l'on est sûr que des objets comme la galaxie d'Andromède ou M87 sont bien des concentrations d'étoiles similaires à la Voie lactée, mais n'en faisant pas partie. Confirmant les intuitions de Thomas Wright et Emmanuel Kant, cette découverte a été faite par Edwin Hubble au début des années 1920. Plus tard, l'astronome et cosmologiste donna même une classification des galaxies, censée représenter un schéma évolutif. La séquence de Hubble n'est plus considérée comme telle aujourd'hui mais on continue à présenter la classification morphologique des galaxies qu'elle constitue.
+                Elle comporte trois grands types. Il y a les spirales, contenant d'importantes quantités de gaz et de poussières, avec un disque où l'on trouve de jeunes étoiles et un bulbe plus ou moins important contenant des vielles étoiles. Viennent ensuite les elliptiques, principalement constituées de vieilles étoiles et pauvres en gaz et poussières, qui ont une structure sphéroïdale. Et enfin les irrégulières, de plus petite taille et riches en jeunes étoiles.
+            </p>
+            <div class="centerMedia">
+                <img src="../media/24h-of-exposure_galaxies-zoom.jpg" class="cropMoy" alt="Galaxies">
+                <div class="figcaption">Zoomez sur l'image et essayer de repérer combien de galaxies il y en a, spoiler: beaucoup</div>
+            </div>
+            <h2>La Galaxie M87</h2>
+            <div class="centerMedia">
+                <video controls>
+                <source src="../media/Zoom_In_On_Galaxy_M87.mp4">
+                </video>
+            </div>
+
+            <h1 id="nebuleuses" class="anchor">Les Nébuleuses</h1>
+            <p>
+               Une nébuleuse est un nuage de gaz et de poussières répandu dans l’espace interstellaire. Jusqu’au siècle dernier, une nébuleuse était par définition un objet fixe dans le ciel. Avant l’invention du télescope, ce terme s’appliquait à tous les corps célestes d’apparence diffuse: ainsi, un grand nombre d’amas d’étoiles ou de galaxies furent appelées nébuleuses.
+               Les nébuleuses sont exclusivement localisées dans la Voie Lactée et dans les autres galaxies. On distingue plusieurs types de nébuleuses, à savoir: les nébuleuses planétaires, constituées de gaz éjecté par une étoile, et les nébuleuses diffuses. 
+            </p>
+            <div class="centerMedia">
+                <img src="../media/Orion_and_Nebula-zoom.jpg" class="cropMoy" alt="Orion et Nebuleuse">
+                <div class="figcaption">On peux apércevoir une nébuleuse pas loin du "genou" d'Orion</div>
+            </div>
+
+            <div id="bottomNav">
+                <div class="inner"><a href="index.html" class="navBtn"> &lt;&lt; </a></div>
+                <div class="inner"><a href="constellations.html" class="navBtn"> &gt;&gt; </a></div>
+            </div>
+        </section>
+        
+        <footer>
+            <div id="date"></div>
+
+            <hr class="pointilles">
+            <div>
+                    
+                <table class="center newsletter">
+                    <tr>
+                        <td class="sideTitle">Newsletter</td>
+                        <td class="whiteBox"><input type="email"></td></tr>
+                    <tr>
+                        <td></td>
+                        <td class="whiteBox"><input type="submit" value="souscrire à la newsletter" class="valid" onclick="valid();"></td></tr>
+                </table>
+            </div>
+                 
+        </footer>
+
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+    
+    
+</html>

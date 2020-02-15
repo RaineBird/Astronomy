@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Pop Culture</title>
+	<meta charset="UTF-8" />
+    <meta name="auteur" content="Meftah Manel">
+    <meta name="keywords" content="Astronomie, galaxie, étoiles, éspace, système solaire, NASA, SpaceX, constellations, planètes, satellites ">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/animation.css">
+</head>
+<body onload="date();">
+
+	<nav class="topNav">
+		<button onclick="afficherMenu();" class="openMenu"><span>Menu</span></button>
+		<audio controls>
+			<source src="../media/star_trek_generique_fr.mp3" type="audio/mpeg">
+		</audio>
+        <span id="audioCaption"><a href="https://www.history.com/news/8-ways-the-original-star-trek-made-history">Générique de Star Trek, la série originale</a></span>
+	
+	</nav>
+
+		<aside>
+			<div class="menuNav" id="menu">
+                <span class="fermer" onclick="fermerMenu();">&times;</span>
+          
+                <ul>
+                	<li><a href="index.html">Accueil</a></li>
+                	<li>
+                		<a href="#seriesFilmes">Séries et Filmes</a>
+                		<ul class="innerNav">
+                			<li><a href="#starTrek">Star Trek</a></li>
+                			<li><a href="#starWars">Star Wars</a></li>
+                			<li><a href="#seulMars">Seul sur Mars</a></li>
+                		</ul>
+                	</li>
+                	<li>
+                		<a href="#jeux" >Jeux vidéo</a>
+                		<ul class="innerNav">
+                			<li><a href="#ksp">Kerbal Space Program</a></li>
+                			<li><a href="#us">Universe Sandbox</a></li>
+                		</ul>
+                	</li>
+                	<li>
+                		<a href="#livres">Livres et Romans</a>
+                		<ul class="innerNav">
+                			<li><a href="#guideGalactique">Le Guide du voyageur galactique</a></li>
+                			<li><a href="#breveHistoire">Une brève histoire du temps</a></li>
+                		</ul>
+                	</li>
+                	<li><a href="#proposerArticle" onclick="afficher(0);">Proposer un article</a></li>
+                	<li><a href="#contact" onclick="afficher(1);">Contact</a></li>
+
+                </ul>
+				
+				
+				
+                
+					
+			</div>
+
+		</aside>
+		<div id="forms">
+            <div id="proposerArticle">
+                <div class="bloc-formulaire">
+                    <span class="fermer" onclick="fermer(0);">&times;</span>
+                    <form id="form_propArticle" onsubmit="return validP();" >
+                        <fieldset>
+                            <legend class="titre">Proposer un article</legend>
+                            <table>
+                            <tr>
+                                <td>Nom</td>
+                                <td>Prenom</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="Nom"></td>
+                                <td><input type="text" id="Prenom"></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>Telephone</td>
+                            </tr>
+                            <tr>
+                                <td><input type="email" id="Email"></td>
+                                <td><input type="tel" id="Tel"></td>
+                            </tr>
+                            <tr>
+                                <td>Votre réseau social</td>
+                                <td>Selectionnez votre article</td>
+
+                            </tr>
+                            <tr>
+                                <td><input type="url" id="Lien"></td>
+                                <td>
+                                    <label class="fichierLabel">
+                                    Importer
+                                        <input type="file" class="fichierInput" required="required" >
+                                    </label>
+                                </td>
+                    
+                            </tr>
+                            <tr>
+                                <td>Couleur de fond de votre article</td> 
+                                <td></td>
+                            </tr>         
+                            <tr>
+                                <td><input type="color" id="couleur" class="colorInput"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="Soumettre l'article" class="valid">
+                                    <input type="reset" value="Effacer" class="effacer">
+                                </td>
+                                <td></td>
+
+                        </table>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <div id="contact">
+                <div class="bloc-formulaire">
+                <span class="fermer" onclick="fermer(1);">&times;</span>
+                <form id="form_contact" onsubmit="return validC()">
+                    <fieldset>
+                        <legend class="titre">Contact</legend>
+                        <table>
+                            <tr>
+                                <td>Nom</td>
+                                <td>Email</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="nom"></td>
+                                <td><input type="email" id="email"></td>
+                            </tr>
+                        </table>
+                        <div>
+                            <textarea placeholder="Saisir votre message ici..." required="required"></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" value="Envoyer" class="valid">
+                            <input type="reset" value="Effacer" class="effacer">
+                        </div> 
+                    </fieldset>
+                </form>
+                </div>
+            </div>
+        </div>
+    
+	<div id="bloc_page">
+		<section id="article">
+			<h1 id="seriesFilmes">Séries et Filmes </h1>
+			<h2 id="starTrek" >Star Trek</h2>
+			<div class="centerMedia">
+				<a href=" https://www.nationalgeographic.com/news/2016/06/star-trek-science-space-astronomy-technology-fazekas/">
+				<img src="../media/star_trek_national_geo.jpg" class="cropMoy" alt="Star Trek: The Official Guide to Our Universe"></a>
+				<div class="figcaption">Célébrant le cinquantième anniversaire de Star Trek, National Geographic se penche sur la véritable science derrière les voyages de la Starship Enterprise.</div>
+			</div>
+			<p>
+				Star Trek est une franchise télévisuelle dont la diffusion a démarré en 1964, et créée par Gene Rodenberry.
+				Depuis que les téléspectateurs ont entendu pour la première fois le slogan, "...explorer de nouveaux Mondes étranges, découvrir de nouvelles vies, d'autres civilisations, et au mépris du danger, reculer l'impossible", Star Trek a représenté l'espoir de ce que l'espace - "la frontière finale" - peut signifier pour l'humanité en quelques siècles. Diffusée pour la première fois en 1966, la série est devenue un phénomène, engendrant des séries télévisées dérivées, des films, des livres et des jeux, et influençant la culture et la technologie.
+			</p>
+			<div class="centerMedia">
+				<video controls class="cropMoy">
+					<source src="../media/Star_Treks_Futuristic_Innovations_StarTalk.mp4">
+				</video>
+				<div class="figcaption">Neil deGrasse Tyson explique pourquoi Star Trek était si important pour la communauté scientifique</div>
+			</div>
+			<p>
+				Quelques astronautes sont apparus Star Trek au fil des ans, notamment Mae Jemison, la première femme afro-américaine à aller dans l'espace. 
+			</p>
+			<div class="centerMedia">
+				<img src="../media/Mae_Carol_Jemison.jpg" class="cropMoy" alt="Mae Carol Jemison">
+			</div>
+
+			<h2 id="starWars">Star Wars</h2>
+			<div class="centerMedia">
+				<video controls class="cropMoy">
+					<source src="../media/star_wars_hyperspace_travel.mp4">	
+				</video>
+				<div class="figcaption">Voyage dans "l'Hyperespace"</div>
+			</div>
+			<p>
+				Star Wars est une saga crée par George Lucas en 1977. L'histoire se déroule dans une galaxie qui est le théâtre d'affrontements entre les Chevaliers Jedi et les Seigneurs noirs des Sith, personnes sensibles à la Force, un champ énergétique mystérieux leur procurant des pouvoirs psychiques. Les Jedi maîtrisent le Côté lumineux de la Force, pouvoir bénéfique et défensif, pour maintenir la paix dans la galaxie. Les Sith utilisent le Côté obscur, pouvoir nuisible et destructeur, pour leurs usages personnels et pour dominer la galaxie.
+				De plus en plus, l'impact de "Star Wars" ne se limite plus à la pop culture ni même à la politique mondiale. Au fur et à mesure que la science et la technologie progressent, le monde grandit petit à petit, tout comme cette galaxie lointaine, très lointaine.
+			</p>
+			<div class="centerMedia">
+				<img src="../media/star_wars_ship.jpg" class="cropMoy" alt="Vaisseau de Star Wars">
+			</div>
+
+			<h2 id="seulMars">Seul sur Mars</h2>
+			<p>
+				Seul sur Mars ( ou The Martian) est un film de science-fiction américain réalisé par Ridley Scott avec le soutien de la Nasa, sorti en 2015. Le film est tiré du roman de science-fiction du même nom de l'auteur américain Andy Weir. Il offre une plongée exceptionnelle dans l'univers martien.
+			</p>
+			<div class="centerMedia">
+				<img src="../media/seulsurmars-rover.jpg" class="cropMoy" alt="Rover de Seul sur Mars">
+				<div class="figcaption">Le rover de Seul sur Mars : très design, l’engin n’est cependant pas si éloigné des véhicules envisagés pour explorer la planète rouge lors de missions habitées.</div>
+			</div>
+			<p>
+				Dans le film, un équipage de la Nasa est en mission là-bas lorsque le personnage joué par Matt Damon est abandonné, laissé pour mort, pendant une évacuation d'urgence. Avec seulement un mois de vivres et sans moyen de communication.
+
+				Face à la perspective de devoir attendre quatre ans avant qu'un vaisseau ne puisse éventuellement le secourir, il passe en mode survie. Réfléchissant à ce qui peut le tuer et à comment l'éviter.
+
+				"Ce que nous aimons dans ce film, c'est qu'il montre comment on doit penser avec un, deux ou trois coups d'avance", confie Rex Walheim, astronaute de la Nasa.
+			</p>
+
+			<div class="centerMedia"> 
+				<img src="../media/seulsurmars-botanique.jpg" class="cropMoy" alt="La botanique dans Seul sur Mars">
+				<div class="figcaption">Faire pousser des légumes dans l’espace fait partie des expériences actuellement menées à bord de la Station Spatiale Internationale.</div>
+			</div>
+			<p>
+				La Nasa a fourni de nombreuses photographies pour reconstituer un paysage martien extrêmement proche de ce que les sondes et les rovers ont observé en termes de texture, de couleur et de reliefs.
+			</p>
+
+			<h1 id="jeux"> Jeux Video</h1>
+			<h2 id="ksp">Kerbal Space Program</h2>
+			<div class="centerMedia"> 
+				<img src="../media/kerbal_space_program_ship.jpg" class="cropMoy" alt="Vaisseau de KSP">
+				<div class="figcaption">Kerbal Space Program offre trois modes de jeu.En Bac à sable, vous pouvez librement construire tout vaisseau spatial qui vous passe par la tête, avec toutes les pièces et la technologie disponibles en jeu.</div>
+			</div>
+			<p>
+				Kerbal Space Program (KSP) est un simulateur de vol spatial permettant au joueur de construire sa propre fusée, son propre avion, son propre satellite artificiel, ou même sa propre station spatiale puis de les lancer dans l'espace1. Le jeu est édité par Private Division et développé par le studio indépendant Squad, basé à Mexico. 
+				Le jeu permet de construire puis de piloter un véhicule spatial dans un système planétaire fictif. Il est possible d'envoyer des sondes, des rovers, des vaisseaux habités vers d'autres planètes et satellites, et de les y poser. Un système d'amarrage des vaisseaux dans l'espace est disponible, rendant possible l'assemblage de stations spatiales. Il est également possible de créer des avions, des ADAV ou encore des lanceurs orbitaux monoétages. 
+			</p>
+			<div class="centerMedia">
+				<a href="https://www.youtube.com/playlist?list=PLWmL9Ldoef0sDwmO6Ef2m1PQ1KqsRFRea">
+				<img src="../media/jdg_ksp.jpg" class="cropMoy" alt="JDG Kerbal Space Program"></a>
+				<div class="figcaption">Le youtuber <a href="https://fr.wikipedia.org/wiki/Joueur_du_Grenier">Frédéric Molas</a> a fait plusieurs viéos sur le jeu. Le centre spatial "Toulouse-Matabiau" n’avait qu’une mission : faire atterrir le vaisseau sur la lune</div>
+			</div>
+
+			<h2 id="us">Universe Sandbox</h2>
+			<div class="centerMedia">
+				<img src="../media/universe_sandbox.jpg" class="cropMoy" alt="Universe Sandbox">
+				<div class="figcaption">Aperçu du jeu</div>
+			</div>
+			<p>
+				Univers Sandbox est un jeu vidéo et un logiciel éducatif simulateur de gravité spatiale interactif. À l'aide de l'Univers Sandbox, les utilisateurs peuvent voir les effets de la gravité sur les objets de l'univers et exécuter des simulations à l'échelle du système solaire, de diverses galaxies ou d'autres simulations, tout en interagissant et en maintenant le contrôle de la gravité, du temps et d'autres objets dans le univers, comme les lunes, les planètes, les astéroïdes, les comètes et les trous noirs.
+				Univers Sandbox a été conçu principalement par Dan Dixon, qui a travaillé sur le projet éducatif pendant plus de quinze ans avant de lancer la version complète en mai 2008. Dixon avait travaillé à temps plein sur le projet depuis 2010, fondant la société Giant Army l'année suivante. Depuis, il a embauché huit designers supplémentaires pour l'entreprise.
+			</p>
+			<div class="centerMedia">
+				<img src="../media/us_Saturn_Neptune.jpg" class="cropMoy" alt="Saturne et Neptune dans Universe Sandbox">
+				<div class="figcaption">Neptune déformant les anneaux de Saturne</div>
+			</div>
+			<p>
+				Des simulations réalistes et fictives apparaissent dans Universe Sandbox, chaque zone de l'espace extra-atmosphérique étant placée par défaut ou selon la préférence du joueur. Les simulations réelles incluent le système solaire, qui comprend les huit planètes, cinq planètes mineures, plus de 160 lunes et des centaines d'astéroïdes; et les prévisions d'événements futurs tels que la collision de la galaxie d'Andromède et de la Voie lactée, qui se produiront dans 3,8 à 4,5 milliards d'années. Pendant le jeu, le joueur peut être introduit dans les régions qui incluent les 100 plus grands corps du système solaire, les 1000 étoiles les plus proches du Soleil ou les 70 galaxies les plus proches de la Voie lactée. Une comparaison visuelle de la taille des plus grandes étoiles et planètes connues peut être explorée, et des animations en temps réel d'événements comme l'astéroïde Apophis passant près de la Terre en 2029 peuvent être observées. Des comètes peuvent être observées entrant en collision avec des planètes, comme la collision du cordonnier Levy 9 avec Jupiter. L'objet trans-neptunien 2008 KV42 avec une orbite de mouvement rétrograde peut être vu dans une simulation. Les lunes peuvent converger en planètes et peuvent affecter l'atmosphère ou les minéraux de la planète. Les joueurs peuvent voir l'étoile Rho Cancri (55 Cancri) dans la constellation du Cancer; ils peuvent voir les cinq planètes connues dans le système. Le vaisseau spatial Pioneer et Voyager peut être vu dans ses rencontres avec Jupiter, Saturne, Uranus et Neptune. Les points visuels de Lagrange de la Terre et de la Lune peuvent être vus, ainsi que la galaxie et le système stellaire. Les emplacements des sursauts gamma, trouvés dans des galaxies éloignées, peuvent être trouvés. Les supernovas sont affichées en temps réel.
+			</p>
+			<div class="centerMedia">
+				<a href="https://www.youtube.com/watch?v=G_ZMeOh_VBc">
+				<img src="../media/markiplier_us.png" class="cropMoy" alt="Markiplier"></a>
+				<div class="figcaption">Le youtuber <a href="https://fr.wikipedia.org/wiki/Markiplier">Mark Fischbach</a> éxplique comment marche ce jeu dans une série de vidéos</div>
+			</div>
+
+			<h1 id="livres">Livres et Romans</h1>
+			<h2 id="guideGalactique">Le Guide du voyageur galactique</h2>
+			<div class="centerMedia" >
+				<img src="../media/hitchhiker_guide_da.jpg" class="left" alt="Le Guide du voyageur galactique">
+			</div>
+			<p class="right">
+				Le Guide du voyageur galactique (titre original : The Hitchhiker's Guide to the Galaxy, abrégé notamment en H2G2) est une œuvre de science-fiction humoristique multidisciplinaire imaginée par l’écrivain britannique Douglas Adams. Son nom provient de l’objet symbolique de la série : un livre électronique intitulé Le Guide du voyageur galactique. Née en 1978 sous forme de feuilleton radiophonique, l’œuvre a depuis été déclinée dans de nombreux médias au cours de différentes adaptations : romans, pièces de théâtre, série télévisée, jeux vidéo, bande dessinée, long métrage pour le cinéma. 
+			</p>
+
+			<h2 id="breveHistoire">Une brève histoire du temps</h2>
+			<div class="left">
+				<img src="../media/sh_breve_histoire_temps.jpg" alt="Une brève histoire du temps">
+			</div>
+			<p class="right">
+				Une brève histoire du temps : Du big bang aux trous noirs est un ouvrage de vulgarisation scientifique qui traite de cosmologie, la science des lois qui gouvernent l’univers, écrit par l’astrophysicien britannique Stephen Hawking. Publié pour la première fois en 1988, il s’adresse à un public profane.
+
+				Dans Une brève histoire du temps, S. Hawking décrit de manière simple la structure, l’origine et l’évolution de l’univers. Il aborde les concepts d’espace et de temps, les particules élémentaires constitutives de l’univers, et les forces fondamentales qui le gouvernent. Les phénomènes cosmiques comme le Big Bang et les trous noirs sont expliqués, et deux théories majeures sont discutées : la relativité générale et la physique quantique. Pour finir, il évoque la recherche d’une « théorie du Tout », propre à décrire de manière cohérente et unifiée l’ensemble des interactions fondamentales de l’univers. 
+			</p>
+
+
+
+		<div class="center">
+            <div class="inner"><a href="NASA.html" class="navBtn"> &lt;&lt; </a></div>
+            <div class="inner"><a href="index.html" class="navBtn"> &gt;&gt; </a></div>
+        </div>
+		</section>
+		<footer>
+            <div id="date"></div>
+
+            <hr class="pointilles">
+            <div>
+                    
+                <table class="center newsletter">
+                    <tr>
+                        <td class="sideTitle">Newsletter</td>
+                        <td class="whiteBox"><input type="email"></td></tr>
+                    <tr>
+                        <td></td>
+                        <td class="whiteBox"><input type="submit" value="souscrire à la newsletter" class="valid" onclick="valid();"></td></tr>
+                </table>
+            </div>
+                 
+        </footer>
+
+	</div>
+	<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="auteur" content="Meftah Manel">
+        <meta name="keywords" content="Astronomie, galaxie, étoiles, éspace, système solaire, NASA, SpaceX, constellations, planètes, satellites ">
+        <link rel="stylesheet" type="text/css" href="../css/animation.css">
+        <link rel="stylesheet" href="../css/style.css"> 
+        <title> Astronomie </title>
+    </head>
+    <body onload="date();">
+        <div id="bloc_page">
+            <header>
+                <div id="bloc_principal">
+                    <hr class="top">
+                    <h1 class="animated">ASTRONOMIE</h1>
+                    <p id="definition">Science des astres, des corps célestes (y compris la Terre) et de la structure de l'univers.</p>
+                    <hr class="bottom">
+                    <nav>
+                        <ul class="horizontal">
+                            <li class="b1"><a href="#sommaire">Sommaire</a></li>
+                            <li class="b2"><a href="#newsletter">Newsletter</a></li>
+                            <li class="b3"><a href="#proposerArticle" onclick="afficher(0);" class="b3">Proposer un article</a></li>
+                            <li class="b4"><a href="#contact" onclick="afficher(1);">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+        <div id="forms">
+            <div id="proposerArticle">
+                <div class="bloc-formulaire">
+                    <span class="fermer" onclick="fermer(0);">&times;</span>
+                    <form id="form_propArticle" onsubmit="return validP();" >
+                        <fieldset>
+                            <legend class="titre">Proposer un article</legend>
+                            <table>
+                            <tr>
+                                <td>Nom</td>
+                                <td>Prenom</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="Nom"></td>
+                                <td><input type="text" id="Prenom"></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>Telephone</td>
+                            </tr>
+                            <tr>
+                                <td><input type="email" id="Email"></td>
+                                <td><input type="tel" id="Tel"></td>
+                            </tr>
+                            <tr>
+                                <td>Votre réseau social</td>
+                                <td>Selectionnez votre article</td>
+
+                            </tr>
+                            <tr>
+                                <td><input type="url" id="Lien"></td>
+                                <td>
+                                    <label class="fichierLabel">
+                                    Importer
+                                        <input type="file" class="fichierInput" required="required" >
+                                    </label>
+                                </td>
+                    
+                            </tr>
+                            <tr>
+                                <td>Couleur de fond de votre article</td> 
+                                <td></td>
+                            </tr>         
+                            <tr>
+                                <td><input type="color" id="couleur" class="colorInput"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="Soumettre l'article" class="valid">
+                                    <input type="reset" value="Effacer" class="effacer">
+                                </td>
+                                <td></td>
+
+                        </table>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <div id="contact">
+                <div class="bloc-formulaire">
+                <span class="fermer" onclick="fermer(1);">&times;</span>
+                <form id="form_contact" onsubmit="return validC()">
+                    <fieldset>
+                        <legend class="titre">Contact</legend>
+                        <table>
+                            <tr>
+                                <td>Nom</td>
+                                <td>Email</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="nom"></td>
+                                <td><input type="email" id="email"></td>
+                            </tr>
+                        </table>
+                        <div>
+                            <textarea placeholder="Saisir votre message ici..." required="required"></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" value="Envoyer" class="valid">
+                            <input type="reset" value="Effacer" class="effacer">
+                        </div> 
+                    </fieldset>
+                </form>
+                </div>
+            </div>
+        </div>
+    
+
+            <section id="sommaire">
+                                    <h1>Sommaire</h1>
+
+                <article>
+
+                    <table class="center">
+                        <tr>
+                            <td>                               
+                                <a href="systemeSolaire.html"><img src="../media/SunProminence.jpg" alt="Prominence du Soleil" class="crop"/></a>
+                                <span class="figcaption">Prominence du Soleil</span>                               
+                            </td> 
+                            <td class="text"><a href="systemeSolaire.html">
+                            <h1>Système Solaire et Galaxies</h1>
+                            <p>On appelle Système solaire, l'ensemble des astres soumis au champ de gravitation du Soleil(notre étoile à elle seule représente 99,8 % de la masse totale du Système solaire !)...</p></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="constellations.html"><img src="../media/grande_ourse.jpg" alt="Grande ourse" class="crop"/></a>
+                                <span class="figcaption">Grande Ourse</span>
+                            </td>
+                            <td class="text"><a href="constellations.html"><h1>Constellations</h1>
+                            <p>Les constellations sont des étoiles proches qui forment une figure quand on les relie entre elles. Chaque civilisation a défini ses propres constellations (Égyptiens, Chinois, Grecs...</p></a></td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="NASA.html"><img src="../media/space_selfie.jpg" alt="Selfie dans l'espace" class="crop"/></a>
+                                <span class="figcaption">Selfie à bords de l'ISS</span>
+                            </td>
+                            <td class="text"><a href="NASA.html"><h1>NASA, SpaceX et CNES</h1>
+                            <p>Créée le 29 juillet 1958, la National Aeronautics and Space Administration, plus connue sous son acronyme Nasa, est l'agence gouvernementale qui est responsable de la majeure partie...</p></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="popCulture.html"><img src="../media/terry_virts_star_trek.jpg" alt="misc" class="crop"/></a>
+                                <span class="figcaption">L'astronaute Terry Virts rends hommage à Leonard Simon Nimoy, connu pour avoir joué Spock dans la franchise Star Trek pendant près de 50ans</span>
+                            </td>
+                            <td class="text"><a href="popCulture.html"><h1>Pop Culture</h1>
+                            <p>Star Trek est une franchise télévisuelle dont la diffusion a démarré en 1964, et créée par Gene Rodenberry. Depuis que les téléspectateurs ont entendu pour la première fois le slogan...</p></a></td>
+                        </tr>
+
+                    </table>
+                    
+                    <div class="center">
+                        <a href="systemeSolaire.html " class="navBtn"> &gt;&gt; </a>
+                    </div>
+                    
+                </article>
+            </section>
+
+        <footer id="newsletter">
+            <div id="date"></div>
+
+            <hr class="pointilles">
+            <div>
+                    
+                <table class="center newsletter">
+                    <tr>
+                        <td class="sideTitle">Newsletter</td>
+                        <td class="whiteBox"><input type="email"></td></tr>
+                    <tr>
+                        <td></td>
+                        <td class="whiteBox"><input type="submit" value="souscrire à la newsletter" class="valid" onclick="valid();"></td></tr>
+                </table>
+            </div>
+                 
+        </footer>
+        </div>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>

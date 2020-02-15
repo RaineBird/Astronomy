@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>NASA, SpaceX et CNEX</title>
+	<meta charset="UTF-8" />
+    <meta name="auteur" content="Meftah Manel">
+    <meta name="keywords" content="Astronomie, galaxie, étoiles, éspace, système solaire, NASA, SpaceX, constellations, planètes, satellites ">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/animation.css">
+</head>
+<body onload="date();">
+<nav class="topNav">
+		<button onclick="afficherMenu();" class="openMenu"><span>Menu</span></button>
+		<audio controls>
+        	<source src="../media/One_step_for_man_Neil_Armstrong.mp3" type="audio/mpeg">
+        </audio>
+        <span id="audioCaption"><a href="https://www.cite-telecoms.com/blog/histoire/histoire-conquete-spaciale/programme-spatial-americain-nasa/premiers-hommes-lune-neil-armstrong-buzz-aldrin/">'Un Petit pas pour l'homme, un Grand pas pour l'humanité' - Neil Armstrong, Juillet 1969</a></span>
+	</nav>
+
+		<aside>
+			<div class="menuNav" id="menu">
+                <span class="fermer" onclick="fermerMenu();">&times;</span>
+				<a href="index.html">Accueil</a>
+				<a href="#nasa" >NASA</a>
+				<a href="#cnes">CNES</a>
+				<a href="#spaceX">SpaceX</a>
+                <a href="#proposerArticle" onclick="afficher(0);">Proposer un article</a>
+				<a href="#contact" onclick="afficher(1);">Contact</a>	
+			</div>
+
+		</aside>
+		<div id="forms">
+            <div id="proposerArticle">
+                <div class="bloc-formulaire">
+                    <span class="fermer" onclick="fermer(0);">&times;</span>
+                    <form id="form_propArticle" onsubmit="return validP();" >
+                        <fieldset>
+                            <legend class="titre">Proposer un article</legend>
+                            <table>
+                            <tr>
+                                <td>Nom</td>
+                                <td>Prenom</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="Nom"></td>
+                                <td><input type="text" id="Prenom"></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>Telephone</td>
+                            </tr>
+                            <tr>
+                                <td><input type="email" id="Email"></td>
+                                <td><input type="tel" id="Tel"></td>
+                            </tr>
+                            <tr>
+                                <td>Votre réseau social</td>
+                                <td>Selectionnez votre article</td>
+
+                            </tr>
+                            <tr>
+                                <td><input type="url" id="Lien"></td>
+                                <td>
+                                    <label class="fichierLabel">
+                                    Importer
+                                        <input type="file" class="fichierInput" required="required" >
+                                    </label>
+                                </td>
+                    
+                            </tr>
+                            <tr>
+                                <td>Couleur de fond de votre article</td> 
+                                <td></td>
+                            </tr>         
+                            <tr>
+                                <td><input type="color" id="couleur" class="colorInput"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="Soumettre l'article" class="valid">
+                                    <input type="reset" value="Effacer" class="effacer">
+                                </td>
+                                <td></td>
+
+                        </table>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <div id="contact">
+                <div class="bloc-formulaire">
+                <span class="fermer" onclick="fermer(1);">&times;</span>
+                <form id="form_contact" onsubmit="return validC()">
+                    <fieldset>
+                        <legend class="titre">Contact</legend>
+                        <table>
+                            <tr>
+                                <td>Nom</td>
+                                <td>Email</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="nom"></td>
+                                <td><input type="email" id="email"></td>
+                            </tr>
+                        </table>
+                        <div>
+                            <textarea placeholder="Saisir votre message ici..." required="required"></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" value="Envoyer" class="valid">
+                            <input type="reset" value="Effacer" class="effacer">
+                        </div> 
+                    </fieldset>
+                </form>
+                </div>
+            </div>
+        </div>
+    
+	<div id="bloc_page">
+		<section id="article">
+			<h1 id="nasa" class="anchor">NASA</h1>
+			<div class="centerMedia">
+				<img src="../media/OrionExplorationFlightTest.jpg" class="cropMoy" alt="Teste d'Orion">
+				<div class="figcaption">Test de la navette Orion pour la mission Artemis</div>
+			</div>
+			<p>
+				Créée le 29 juillet 1958, la National Aeronautics and Space Administration, plus connue sous son acronyme Nasa, est l'agence gouvernementale qui est responsable de la majeure partie du programme spatial civil des États-Unis. 
+				Elle joue mondialement un rôle dominant dans le domaine du vol spatial habité, de l'exploration du Système solaire et de la recherche spatiale. Parmi les réalisations les plus marquantes de l'agence figurent les programmes spatiaux habités Apollo, la navette spatiale américaine, la station spatiale internationale (en coopération avec plusieurs pays), les télescopes spatiaux comme Hubble, l'exploration de Mars par les sondes spatiales Viking et MER, ainsi que celle de Jupiter et Saturne par les sondes Pioneer, Voyager, Galileo et Cassini-Huygens.
+				De nos jours, la Nasa emploie environ 20.000 personnes réparties dans une vingtaine d'institutions, comme le Goddard Space Flight Center, le Jet Propulsion Laboratory, le Langley Research Center ou encore le Kennedy Space Center. Elle accomplit des missions d'exploration et de recherche dans le domaine spatial et aérospatial par divers moyens : sondes, satellites, missions robotisées, etc. L'agence possède également un volet sciences de la Terre, pour étudier en particulier les effets du changement climatique.
+			</p>
+			<div class="centerMedia">
+				<img src="../media/earth_iss_expedition40.jpg" class="cropMoy" alt="Terre, vur de l'ISS">
+			    <div class="figcaption">La terre, vue depuis la Station Spatiale Internationale (ISS)</div>
+            </div>
+			<p>
+				La Nasa exploite l'ISS, en coopération avec d'autres agences gouvernementales, où sont réalisées des recherches en astronomie, en sciences des matériaux et en biologie. 
+				Plus gros objet artificiel en orbite terrestre, avec 110 mètres de longueur et une masse de 400 tonnes, la Station spatiale internationale s'est construite petit à petit. Le premier élément de ce Meccano géant, le module russe Zarya, a été lancé par une fusée russe Proton en novembre 1998, 14 ans après la décision de la Nasa de lancer le projet. Son histoire est celle d'une épopée spatiale, mais aussi d'une longue collaboration internationale.
+			</p>
+			<div class="centerMedia">
+				<img src="../media/iss_Canadarm2.jpg" class="cropMoy" alt="ISS Canadarm2">
+				<div class="figcaption">Le Canadarm2 fait partie de la contribution du Canada au programme de l'ISS. Le laboratoire orbital a été assemblé en grande partie à l'aide de ce bras robotisé de 17 m de longueur.</div>
+			</div>
+
+			<h2>Quelques Missions En Cours de la Nasa</h2>
+			<ul class="liste">
+				<li><a href="https://voyager.jpl.nasa.gov/">Voyager 1</a> et <a href="https://www.ouest-france.fr/sciences/espace/video-ou-est-la-sonde-voyager-2-partie-en-1977-pour-explorer-le-systeme-solaire-6617322">Voyager2</a></li>
+				<li><a href="https://fr.wikipedia.org/wiki/Juno_(sonde_spatiale)">Juno</a></li>
+				<li><a href="https://www.futura-sciences.com/sciences/definitions/univers-new-horizons-3607/">New Horizons</a></li>
+			</ul>
+
+			<h1 id="cnes" class="anchor">CNES</h1>
+			<div class="centerMedia">
+				<img src="../media/centre-spacial-guyanne.jpg" class="cropMoy" alt="CNES">
+			</div>
+			<p>
+				L'Agence spatiale française, le CNES, a été créée en 1961 par le gouvernement français. Le CNES est un établissement public à caractère industriel et commercial (EPIC) qui est en charge du développement des activités spatiales de la France.
+				Le CNES a pour mission de proposer au gouvernement français les orientations de sa politique spatiale et de mettre en œuvre, avec le concours de ses partenaires de l'industrie, de la recherche et de la défense, les programmes décidés.
+				Acteur majeur de l'Europe spatiale, le CNES est force de propositions pour maintenir la France et l'Europe en tête de la compétition mondiale. La participation de la France à l'Agence spatiale européenne (ESA) est également assurée par le CNES.
+				Il s'entoure de partenaires scientifiques et industriels avec lesquels sont réalisés les programmes spatiaux qu'il conçoit. Il est engagé dans de nombreuses coopérations internationales, indissociables de toute politique spatiale d'envergure.
+			</p>
+			<div class="centerMedia">
+				<img src="../media/cnes-decollage-fusee-ariane-5.jpg" class="cropMoy" alt="Ariane 5">
+				<div class="figcaption">Ariane 5, décollant le 25 juillet 2018 depuis la base de Kourou en Guyane Française</div>
+			</div>
+			<p>
+				<a href="https://www.numerama.com/sciences/320706-de-six-mois-avant-au-jour-j-que-se-passe-t-il-lors-du-decollage-dune-fusee.html">Ariane 5</a> est un lanceur composé d'un corps central monoétage pourvu de deux accélérateurs à poudre et d'un étage supérieur.
+				Cette architecture, bâtie autour d'un étage principal cryotechnique, allie simplicité et robustesse avec un nombre d'éléments propulsifs limité, tout en offrant un important potentiel évolutif, notamment au niveau des parties hautes.
+			</p>
+
+			<h1 id="spaceX" class="anchor">SpaceX</h1>
+			<div class="centerMedia">
+				<img src="../media/spaceX.jpg" class="cropMoy" alt="SpaceX">
+				<div class="figcaption">Un lanceur développé par Space X au centre spatial Kennedy en Floride, aux Etats-Unis le 8 février 2018</div>
+			</div>
+			<p>
+				SpaceX est une entreprise américaine spécialisée dans l’aérospatial. Créée en 2002 par le milliardaire Elon Musk, l’entreprise est devenue un prestataire de premier rang de la Nasa. En moins de vingt ans, elle s’est érigée comme un acteur majeur du secteur ; un parcours hors normes étroitement lié à celui de son fondateur.
+				Les activités de la société s’articulent essentiellement autour de la construction de vaisseaux spatiaux à visée commerciale. Consécration en 2008, SpaceX remporte l’appel d’offres de la Nasa pour des missions de fret à destination de la Station spatiale internationale (ISS) : 12 lancements pour 1,6 milliard de dollars. Et depuis leur collaboration subsiste. En effet, la firme californienne a été de nouveau sollicitée par l’agence pour assurer le transport d’astronautes vers l’ISS. SpaceX travaille également à la mise en orbite de satellites de télécommunication.
+				Grâce à ses innovations, SpaceX ne cesse de bousculer l’industrie spatiale réputée très conservatrice. Car en plus d’être un acteur privé, l’entreprise se démarque par sa capacité à recycler et réutiliser certains composants de ses fusées. Fin 2015, après plusieurs échecs, le monde assistait pour la première fois à l’atterrissage réussi d’une fusée. 
+			</p>
+			<div class="centerMedia">
+				<video controls>
+					<source src="../media/Falcon_Heavy.mp4" type="video/mp4">
+					<div class="figcaption">Lancement de la Falcon Heavy, la fusée la plus puissante du monde.</div>
+				</video>
+			</div>
+
+			<p>
+				Falcon 1 a été la première, privée, à atteindre l'orbite terrestre en 2008. Depuis, son vaisseau Dragon est sous contrat avec la Nasa pour ravitailler la Station spatiale internationale et, à terme, y emmener des astronautes.
+				Récemment, Elon Musk a dévoilé la fusée de SpaceX pour <a href="https://www.nationalgeographic.fr/espace/elon-musk-dans-7-ans-spacex-pourra-envoyer-des-hommes-sur-mars">coloniser Mars. </a>
+				Le prototype de Starship, MK1, permettra d'envoyer jusqu'à 100 personnes dans l'espace et sera entièrement réutilisable.
+				Si le projet réussit, ce sera la plus grande fusée jamais construite, avec 118 mètres de long et 9 de large. La partie présentée, Starship MK1, mesure 50 mètres. Le lanceur “Super-heavy”, qui propulsera le vaisseau spatial en dehors de l’atmosphère, mesurera lui 68 mètres.
+				Tous les éléments de la fusée seront réutilisables et les vaisseaux Starship pourront être ravitaillés en orbite.
+			</p>
+			<h2>Quelques Productions de SpaceX </h2>
+			<ul class="liste">
+				<li>La <a href="https://www.spacex.com/falcon9">Falcon 9</a></li>
+				<li>La <a href="https://www.spacex.com/falcon-heavy">Falcon Heavy</a></li>
+				<li>Le Vaisseau<a href="https://www.spacex.com/dragon"> Dragon</a></li>
+				<li>Le Vaisseau <a href="https://www.spacex.com/starship">Starship</a></li>
+			</ul>
+
+		<div class="center">
+            <div class="inner"><a href="constellations.html" class="navBtn"> &lt;&lt; </a></div>
+            <div class="inner"><a href="popCulture.html" class="navBtn"> &gt;&gt; </a></div>
+        </div>
+		</section>
+		<footer>
+            <div id="date"></div>
+
+            <hr class="pointilles">
+            <div>
+                    
+                <table class="center newsletter">
+                    <tr>
+                        <td class="sideTitle">Newsletter</td>
+                        <td class="whiteBox"><input type="email"></td></tr>
+                    <tr>
+                        <td></td>
+                        <td class="whiteBox"><input type="submit" value="souscrire à la newsletter" class="valid" onclick="valid();"></td></tr>
+                </table>
+            </div>
+                 
+        </footer>
+
+	</div>
+	<script src="../js/main.js"></script>
+</body>
+</html>
